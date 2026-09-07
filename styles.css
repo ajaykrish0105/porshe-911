@@ -1,0 +1,24 @@
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000;color:#f5f7fa;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
+.page{position:relative;width:100%;min-height:100vh}
+.page-one{height:100vh;overflow:hidden;background:#000}
+#heroVideo{width:100%;height:100%;object-fit:cover;display:block;background:#000;transform:translateZ(0);backface-visibility:hidden}
+
+.page-two{display:grid;place-items:center;padding:8vw;background:radial-gradient(circle at 50% 20%,#202630 0,#11151b 43%,#090b0f 76%)}
+.page-two-inner{width:min(1000px,92vw)}
+.eyebrow{margin:0 0 18px;font-size:12px;letter-spacing:.28em;color:#bbc3cf}
+.page-two h1,.after-page h2{margin:0 0 24px;font-size:clamp(48px,8vw,112px);line-height:.92;letter-spacing:-.055em}
+.sub{margin:0;max-width:720px;color:#9da7b5;font-size:clamp(16px,1.4vw,22px);line-height:1.7}
+
+.scroll-page{position:relative;height:420vh;background:#000}
+.scroll-pin{position:absolute;top:0;left:0;width:100%;height:100vh;overflow:hidden;background:#000;z-index:20}
+.scroll-pin.is-fixed{position:fixed;top:0;left:0}
+.scroll-pin.is-bottom{position:absolute;top:auto;bottom:0;left:0}
+#scrubVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#000;transform:translateZ(0);backface-visibility:hidden}
+.loader{position:absolute;inset:0;z-index:5;display:grid;place-items:center;background:#000;transition:opacity .25s ease,visibility .25s ease}
+.loader.hide{opacity:0;visibility:hidden}
+.spinner{width:34px;height:34px;border:2px solid rgba(255,255,255,.16);border-top-color:#fff;border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.after-page{min-height:100vh;display:grid;place-items:center;padding:8vw;background:#0b0d10}
+.after-page>div{width:min(1000px,92vw)}
+@media(max-width:900px){.scroll-page{height:360vh}}
